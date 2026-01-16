@@ -137,7 +137,12 @@ const HeroSection = () => {
               className="gap-2 px-8 neon-border hover:bg-primary/10"
               asChild
             >
-              <a href="/resume.pdf" download>
+              <a
+                href={`${import.meta.env.BASE_URL}resume.pdf`}
+                download
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Download size={18} />
                 Download Resume
               </a>
