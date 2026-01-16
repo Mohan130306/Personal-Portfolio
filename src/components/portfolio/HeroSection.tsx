@@ -100,7 +100,7 @@ const HeroSection = () => {
             className="mb-6"
           >
             <h2 className="text-2xl md:text-4xl font-mono text-muted-foreground">
-              <span className="text-primary">{">"}</span> MERN Stack Developer{" "}
+              <span className="text-primary">{">"}</span> Pre-Final Year Student{" "}
               <span className="inline-block w-0.5 h-8 bg-primary animate-blink align-middle" />
             </h2>
           </motion.div>
