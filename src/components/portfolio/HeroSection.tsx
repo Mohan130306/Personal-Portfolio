@@ -78,7 +78,7 @@ const HeroSection = () => {
             transition={{ duration: 0.5 }}
             className="text-primary font-mono text-lg mb-4"
           >
-            {"<Hello World />"}
+            
           </motion.p>
 
           {/* Name */}
@@ -100,7 +100,7 @@ const HeroSection = () => {
             className="mb-6"
           >
             <h2 className="text-2xl md:text-4xl font-mono text-muted-foreground">
-              <span className="text-primary">{">"}</span> Pre-Final Year Student{" "}
+              <span className="text-primary">{">"}</span>Designing Logic, Developing Solutions{" "}
               <span className="inline-block w-0.5 h-8 bg-primary animate-blink align-middle" />
             </h2>
           </motion.div>
@@ -112,8 +112,7 @@ const HeroSection = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8"
           >
-            Passionate about building scalable web applications with modern technologies.
-            Transforming ideas into elegant, efficient code.
+          Building scalable solutions with Java and modern web technologies.          
           </motion.p>
 
           {/* CTA Buttons */}

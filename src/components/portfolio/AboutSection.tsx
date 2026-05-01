@@ -56,22 +56,20 @@ const AboutSection = () => {
             >
               <div className="glass-card rounded-xl p-8">
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  Hi! I'm <span className="text-primary font-semibold">Mohan Kumar</span>, 
-                  a passionate MERN Stack Developer currently pursuing my 
-                  <span className="text-foreground font-medium"> BE in Computer Science and Engineering</span> at 
-                  VSB College of Engineering Technical Campus (2023-2027).
+                  I'm <span className="text-primary font-semibold">Mohan Kumar</span>, 
+                  an aspiring Software Engineer currently pursuing 
+                  <span className="text-foreground font-medium"> Computer Science and Engineering</span> at 
+                  VSB College of Engineering Technical Campus.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  With a strong foundation in full-stack development, I specialize in building 
-                  modern web applications using <span className="text-primary">React</span>, 
-                  <span className="text-primary"> Node.js</span>, and 
-                  <span className="text-primary"> MongoDB</span>. My journey in tech started with 
-                  curiosity and has evolved into a deep passion for creating impactful digital solutions.
+                  I have a strong foundation in <span className="text-primary">Java</span> and 
+                  <span className="text-primary"> web development</span>, with a passion for building 
+                  efficient, scalable applications.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  I'm currently maintaining a <span className="text-foreground font-medium">CGPA of 8.96</span> while 
-                  actively participating in competitive coding and exploring new technologies. I believe 
-                  in continuous learning and pushing boundaries to deliver exceptional results.
+                  I'm eager to apply my skills, learn continuously, and contribute to 
+                  <span className="text-foreground font-medium"> impactful projects</span> in a 
+                  growth-oriented environment.
                 </p>
               </div>
             </motion.div>
