@@ -1,40 +1,29 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import {
+  Code2,
+  Layout,
+  Terminal,
+  Database,
+  GitBranch,
+  Monitor,
+  Zap,
+  Globe,
+  Sparkles,
+} from "lucide-react";
 
-const skillCategories = [
-  {
-    title: "Frontend",
-    skills: [
-      { name: "React", icon: "⚛️" },
-      { name: "HTML5", icon: "🌐"},
-      { name: "CSS3", icon: "🎨" },
-      { name: "JavaScript", icon: "💛" },
-    ],
-  },
-  {
-    title: "Backend",
-    skills: [
-      { name: "Node.js", icon: "💚"},
-      { name: "MongoDB", icon: "🍃"},
-      { name: "JWT Auth", icon: "🔐"},
-    ],
-  },
-  {
-    title: "Core Concepts",
-    skills: [
-      { name: "DSA", icon: "🧮"},
-      { name: "OOPs", icon: "🏗️"},
-    ],
-  },
-  {
-    title: "Tools",
-    skills: [
-      { name: "Git", icon: "📊"},
-      { name: "VS Code", icon: "💻"},
-      { name: "IntelliJ IDEA", icon: "🧠"},
-    ],
-  },
+const skills = [
+  { name: "React", icon: Code2, color: "from-[#61dafb] to-[#22d3ee]" },
+  { name: "HTML5", icon: Globe, color: "from-[#f06529] to-[#fb923c]" },
+  { name: "CSS3", icon: Layout, color: "from-[#2965f1] to-[#60a5fa]" },
+  { name: "JavaScript", icon: Zap, color: "from-[#f7df1e] to-[#eab308]" },
+  { name: "Node.js", icon: Terminal, color: "from-[#3c873a] to-[#4ade80]" },
+  { name: "MongoDB", icon: Database, color: "from-[#00a86b] to-[#34d399]" },
+  { name: "Git", icon: GitBranch, color: "from-[#f05032] to-[#fb7185]" },
+  { name: "VS Code", icon: Monitor, color: "from-[#0a84ff] to-[#38bdf8]" },
+  { name: "IntelliJ IDEA", icon: Sparkles, color: "from-[#8250df] to-[#a78bfa]" },
+  { name: "Fast Dev", icon: Zap, color: "from-[#facc15] to-[#f97316]" },
 ];
 
 const SkillsSection = () => {
@@ -64,44 +53,31 @@ const SkillsSection = () => {
             </h3>
           </div>
 
-          {/* Skills Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {skillCategories.map((category, categoryIndex) => (
-              <motion.div
-                key={category.title}
-                initial={{ opacity: 0, y: 30 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: categoryIndex * 0.1 }}
-                className="glass-card rounded-xl p-6"
-              >
-                <h4 className="font-mono text-primary text-sm mb-6 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-primary animate-pulse-glow" />
-                  {category.title}
-                </h4>
-
-                <div className="space-y-4">
-                  {category.skills.map((skill, skillIndex) => (
-                    <motion.div
-                      key={skill.name}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={isInView ? { opacity: 1, x: 0 } : {}}
-                      transition={{
-                        duration: 0.4,
-                        delay: categoryIndex * 0.1 + skillIndex * 0.05,
-                      }}
-                    >
-                      <div className="flex items-center gap-3 py-1">
-                        <span className="text-lg">{skill.icon}</span>
-                        <span className="text-sm font-medium tracking-wide">
-                          {skill.name}
-                        </span>
-                      </div>
-
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
+          {/* Tech Stack Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-6">
+            {skills.map((skill, index) => {
+              const Icon = skill.icon;
+              return (
+                <motion.div
+                  key={skill.name}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.5, delay: index * 0.08 }}
+                  whileHover={{ y: -10 }}
+                  className="relative overflow-hidden rounded-full border border-white/10 bg-card/80 p-6 text-center shadow-[0_0_30px_rgba(14,165,233,0.12)] transition-all duration-300 hover:shadow-[0_0_40px_rgba(14,165,233,0.25)]"
+                >
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/5 via-transparent to-slate-900/10 blur-2xl" />
+                  <div className="relative z-10 flex h-28 w-28 items-center justify-center rounded-full border border-white/10 bg-slate-950/90 mx-auto mb-4 shadow-[0_0_30px_rgba(56,189,248,0.15)]">
+                    <div className={`flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br ${skill.color} from-opacity-20 to-opacity-20`}>
+                      <Icon size={32} className="text-white" />
+                    </div>
+                  </div>
+                  <p className="relative z-10 text-sm font-medium tracking-wide text-white">
+                    {skill.name}
+                  </p>
+                </motion.div>
+              );
+            })}
           </div>
         </motion.div>
       </div>

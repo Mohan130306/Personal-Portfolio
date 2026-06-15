@@ -7,11 +7,20 @@ const experiences = [
   {
     type: "work",
     icon: Briefcase,
-    title: "MERN Stack Intern",
-    organization: "ViruzVerse Solutions",
-    period: "Dec 2025 - Jan 2026",
+    title: "ServiceNow – Virtual Internship",
+    organization: "Virtual Internship",
+    period: "Feb 2026 – Apr 2026",
     description:
-      "Working on full-stack web applications using MongoDB, Express.js, React, and Node.js. Collaborating with senior developers to build scalable solutions.",
+      "Learned ServiceNow fundamentals and basic administration, including user and role management. Worked on ITSM processes like incident management and service request workflows.",
+  },
+  {
+    type: "work",
+    icon: Briefcase,
+    title: "Viruzverse – MERN Internship",
+    organization: "ViruzVerse Solutions",
+    period: "Dec 2025 – Jan 2026",
+    description:
+      "Completed a MERN stack internship, gaining hands-on experience in full-stack web development. Built an expense tracker application with CRUD operations and responsive UI.",
   },
 ];
 
@@ -19,12 +28,22 @@ const education = [
   {
     type: "education",
     icon: GraduationCap,
-    title: "BE Computer Science & Engineering",
-    organization: "VSB College of Engineering Technical Campus",
-    period: "Sep 2023 - Sep 2027",
-    description: "Currently pursuing Bachelor's degree with CGPA: 8.96. Focus on software development, algorithms, and system design.",
+    title: "Bachelor of Engineering in Computer Science",
+    organization: "V S B College of Engineering Technical Campus, Coimbatore",
+    period: "2023 – 2027",
+    description: "CGPA: 8.83 / 10",
+  },
+  {
+    type: "education",
+    icon: GraduationCap,
+    title: "Class XII (Higher Secondary)",
+    organization: "Nagamani Ammal Matric Higher Secondary School, [Board - State Board]",
+    period: "2022 – 2023",
+    description: "Percentage: 81.5% (489/600)",
   },
 ];
+
+const rightSideItems = [];
 
 const certifications = [
   {
@@ -35,13 +54,37 @@ const certifications = [
   },
   {
     icon: Award,
-    title: "Python Programming",
+    title: "Data Science & Analytics",
+    issuer: "Future Interns",
+    color: "from-green-500 to-teal-500",
+  },
+  {
+    icon: Award,
+    title: "Android Development",
+    issuer: "Prodigy InfoTech",
+    color: "from-indigo-500 to-violet-500",
+  },
+  {
+    icon: Award,
+    title: "Machine Learning",
+    issuer: "Codsoft",
+    color: "from-emerald-500 to-lime-500",
+  },
+  {
+    icon: Award,
+    title: "Crash Course on Python",
     issuer: "Coursera",
     color: "from-blue-500 to-cyan-500",
   },
   {
     icon: Award,
-    title: "Big Data Computing",
+    title: "Secure Computing",
+    issuer: "Brain Trainers Academy",
+    color: "from-red-500 to-pink-500",
+  },
+  {
+    icon: Award,
+    title: "Big Data Computing, Edge Computing",
     issuer: "NPTEL",
     color: "from-purple-500 to-pink-500",
   },
@@ -112,7 +155,7 @@ const ExperienceSection = () => {
               </div>
             </div>
 
-            {/* Certifications */}
+            {/* Certifications (right column) */}
             <div>
               <h4 className="font-mono text-primary mb-8 flex items-center gap-2">
                 <Award size={18} />

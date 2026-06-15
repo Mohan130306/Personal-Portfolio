@@ -6,13 +6,13 @@ import { Code2, Rocket, Lightbulb, Users } from "lucide-react";
 const highlights = [
   {
     icon: Code2,
-    title: "Clean Code",
-    description: "Writing maintainable, scalable code following best practices",
+    title: "Class Representative",
+    description: "Elected to represent classmates and support student-led initiatives",
   },
   {
     icon: Rocket,
-    title: "Fast Learner",
-    description: "Quick to adapt to new technologies and frameworks",
+    title: "Event Organizer",
+    description: "Participated in organizing multiple campus events with strong coordination",
   },
   {
     icon: Lightbulb,
@@ -65,6 +65,10 @@ const AboutSection = () => {
                   I have a strong foundation in <span className="text-primary">Java</span> and 
                   <span className="text-primary"> web development</span>, with a passion for building 
                   efficient, scalable applications.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  My CGPA is <span className="text-primary font-semibold">8.83 out of 10</span>, 
+                  reflecting my dedication to academic excellence.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
                   I'm eager to apply my skills, learn continuously, and contribute to 
