@@ -36,6 +36,45 @@ npm i
 npm run dev
 ```
 
+### Windows PowerShell: `npm` script security error
+
+If you see an error like:
+
+```
+npm : File C:\\Program Files\\nodejs\\npm.ps1 cannot be loaded because running scripts is disabled on this system.
+```
+
+Use one of the following workarounds:
+
+- Run the dev server using the `npm.cmd` launcher (works in PowerShell):
+
+```powershell
+npm.cmd run dev
+```
+
+- Or start the server from Command Prompt (cmd.exe):
+
+```cmd
+npm run dev
+```
+
+- Temporary bypass for a single command (no policy change):
+
+```powershell
+powershell -ExecutionPolicy Bypass -NoProfile -Command "npm run dev"
+```
+
+- Set a safer per-user policy so `npm` scripts work in PowerShell (requires confirmation):
+
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+# Then close and reopen PowerShell and run:
+npm run dev
+```
+
+Only use the policy change if you understand the security implications. The `npm.cmd` or Command Prompt approaches are simplest and safe for development.
+
+
 **Edit a file directly in GitHub**
 
 - Navigate to the desired file(s).
