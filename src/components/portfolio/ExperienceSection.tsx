@@ -31,7 +31,7 @@ const education = [
     title: "Bachelor of Engineering in Computer Science",
     organization: "V S B College of Engineering Technical Campus, Coimbatore",
     period: "2023 – 2027",
-    description: "CGPA: 8.83 / 10",
+    description: "CGPA: 8.67 / 10",
   },
   {
     type: "education",
